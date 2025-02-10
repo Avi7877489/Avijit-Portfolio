@@ -1,0 +1,158 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 60px 20px;
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .services-format {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: transform 0.4s, border 0.4s;
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  .services-format h3 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .services-format h2 {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(270deg, #df8908 50%, #b415ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .services-format p {
+    color: #d4d4d4;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 300px;
+  }
+  
+  .services-readmore {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .services-format:hover {
+    border: 2px solid #ff00ff;
+    background-image: linear-gradient(45deg, #3f0028, #582300);
+    transform: scale(1.05);
+  }
+  
+ 
+  @media (max-width: 1024px) {
+    .services {
+      gap: 50px;
+      margin: 40px 30px;
+    }
+  
+    .services-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .services-format {
+      padding: 30px;
+    }
+  
+    .services-format h3 {
+      font-size: 24px;
+    }
+  
+    .services-format h2 {
+      font-size: 28px;
+    }
+  
+    .services-format p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .services {
+      gap: 40px;
+      margin: 30px 15px;
+    }
+  
+    .services-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .services-format {
+      padding: 20px;
+    }
+  
+    .services-format h3 {
+      font-size: 20px;
+    }
+  
+    .services-format h2 {
+      font-size: 24px;
+    }
+  
+    .services-format p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    .services-readmore {
+      gap: 10px;
+      font-size: 14px;
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .services {
+      gap: 30px;
+      margin: 20px 10px;
+    }
+  
+    .services-format {
+      padding: 15px;
+    }
+  
+    .services-format h3 {
+      font-size: 18px;
+    }
+  
+    .services-format h2 {
+      font-size: 20px;
+    }
+  
+    .services-format p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  
+    .services-readmore {
+      font-size: 12px;
+      gap: 8px;
+    }
+  }
+  

@@ -1,0 +1,132 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  padding: 20px;
+}
+.hero img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+.hero h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.hero h1 span {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+}
+.hero-action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.hero-connect,
+.hero-resume {
+  padding: 24px 45px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.hero-connect {
+  background: linear-gradient(270deg, #df8908 -5.9%, #b415ff 100%);
+}
+.hero-resume {
+  border: 2px solid #fff;
+}
+.hero-connect:hover {
+  border: 2px solid #fff;
+}
+.hero-resume:hover {
+  border-color: #b415ff;
+}
+
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 50px;
+    width: 80%;
+  }
+  .hero p {
+    width: 60%;
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .hero img {
+    max-width: 250px;
+  }
+  .hero-connect,
+  .hero-resume {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+  .hero-action {
+    gap: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+    width: 90%;
+  }
+  .hero p {
+    width: 80%;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .hero img {
+    max-width: 200px;
+  }
+  .hero-connect,
+  .hero-resume {
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 40px;
+  }
+  .hero-action {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+  .hero p {
+    width: 90%;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .hero img {
+    max-width: 150px;
+  }
+  .hero-connect,
+  .hero-resume {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 30px;
+  }
+}
