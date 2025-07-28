@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Services = () => {
   return (
-    <div className="services">
+    <div id="services" className="services">
       <div className="services-container">
         {Services_Data.map((service, index) => (
           <div key={index} className="services-format">

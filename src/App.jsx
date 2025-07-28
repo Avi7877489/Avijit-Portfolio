@@ -12,7 +12,12 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-      <Routes>
+      <Hero/>
+      <About/>
+      <Services/>
+      <Project/>
+      <Contact/>
+      {/* <Routes>
         <Route path='/' element={<Hero/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/services' element={<Services/>}/>
@@ -20,7 +25,7 @@ const App = () => {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/cont' element={<Contact/>}/>
          <Route path='*' element={<Navigate to="/" />} />
-      </Routes>
+      </Routes> */}
       <Footer/>
       
     </div>

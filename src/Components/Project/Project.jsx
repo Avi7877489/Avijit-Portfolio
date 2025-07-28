@@ -12,7 +12,7 @@ const Project = () => {
     setItemsToShow((prevItemsToShow) => prevItemsToShow + 3);
   };
   return (
-    <div className="portfolio">
+    <div id="project" className="portfolio">
       <div className="portfolio-container">
         {Portfolio_data.slice(0, itemsToShow).map((work, index) => (
           <div key={index} onClick={() => handleClick(work.w_link)}>

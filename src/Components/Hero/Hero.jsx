@@ -31,7 +31,7 @@ const Hero = () => {
     navigate('./contact')
   }
   return (
-    <div className="hero">
+    <div id="home" className="hero">
       <img src={profilephoto} alt="" />
       <h1>
         {" "} I'm Avijit Ghosh <br />

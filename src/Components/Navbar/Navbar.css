@@ -1,97 +1,116 @@
+/* ---------- General Navbar Styling ---------- */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 30px;
+  padding: 20px 30px;
+  background-color: #000; /* Change this as per your theme */
 }
-.navbar img{
-  width: 100%;
-  max-width: 50px;
+
+/* ---------- Logo Styling ---------- */
+.navbar img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
 }
+
+/* ---------- Desktop Menu ---------- */
 .nav-menus {
   display: flex;
   gap: 40px;
 }
 
 .nav-menu {
-  align-items: center;
   font-size: 20px;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s, font-weight 0.3s;
 }
+
+.nav-menu:hover {
+  transform: scale(1.1);
+  font-weight: 600;
+}
+
+.active {
+  font-weight: bold;
+  color: #90ef0c;
+}
+
+/* ---------- Connect Button ---------- */
 .nav-connect {
-  padding: 20px 40px;
+  padding: 12px 30px;
   border-radius: 50px;
   background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-  font-size: 22px;
-  cursor: pointer;
-  transition: 0.5s;
+  font-size: 18px;
   text-decoration: none;
   color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
+
 .nav-connect:hover {
   transform: scale(1.05);
 }
-.nav-menu:hover{
-  transform: scale(1.1);
-  transition: 0.3s;
-  font-weight: 600;
-}
-.active {
 
-  font-weight: bold;  
-  color: #90ef0c;
-  
-}
-.nav-mob-open{
-  display: none;
-}
-.nav-mob-close{
-  display: none;
+/* ---------- AnchorLink Wrapper ---------- */
+.anchor_link {
+  text-decoration: none;
+  color: white;
 }
 
-@media(max-width:768px){
-  .navbar{
-    margin: 20px 30px;
-  }
-  .nav-connect{
-    display: none;
-  }
-  .nav-mob-open{
-    display: block;
-    /* position: fixed; */
-    right: 30px;
-    font-weight: bolder;
-    font-size: larger;
-  }
-  .nav-mob-close{
-    display: block;
-    position: relative;
-    top: 30px;
-    left: 290px;
-    width: 30px;
-    font-weight: bolder;
-    font-size: large;
-  }
-  .nav-menus{
-    position: fixed;
+/* ---------- Mobile Menu Icons (Hidden by Default) ---------- */
+.nav-mob-open,
+.nav-mob-close {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- Responsive (Mobile) Styling ---------- */
+@media (max-width: 768px) {
+  .nav-menus {
     flex-direction: column;
-    align-items: start;
-    top: 0;
+    align-items: flex-start;
     gap: 30px;
     background-color: #1F0016;
-    width: 350px;
-    height: 100%;
-    z-index: 2;
-    transition: right 0.5s;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
     right: -350px;
+    padding: 60px 30px 0 30px;
+    transition: right 0.5s ease-in-out;
+    z-index: 20;
   }
+
   .nav-menu {
-    font-size: 30px;
-    padding-left: 100px;
-    flex-direction: row;
-    gap: 20px;
+    font-size: 24px;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+
+  .nav-mob-open {
+    display: block;
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 30;
+  }
+
+  .nav-mob-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    z-index: 30;
   }
 }

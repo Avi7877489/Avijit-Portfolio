@@ -4,7 +4,7 @@ import profilephoto from "../../assets/profilephoto.png";
 
 const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about-section">
         <div className="about-left">
           <img src={profilephoto} alt="Profile" />
