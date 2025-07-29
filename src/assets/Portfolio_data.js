@@ -7,13 +7,15 @@ const Portfolio_data = [
         w_no:1,
         w_name:"Web Design",
         w_img:airbnb,
-        w_link: 'https://airnestproject.netlify.app/'
+        w_link: 'https://airnestproject.netlify.app/',
+        repo_link: 'https://github.com/narsijangid/AirNest'
     },
     {
         w_no:2,
         w_name:"Web Design",
         w_img:Imagify,
-        w_link: 'https://imagifyprodev.netlify.app/'
+        w_link: 'https://imagifyprodev.netlify.app/',
+        repo_link: 'https://github.com/Avi7877489/Imagify.git'
     },
     {
         w_no:3,

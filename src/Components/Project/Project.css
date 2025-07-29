@@ -14,21 +14,60 @@
   width: 100%;
 }
 
-.portfolio-container img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3; 
-  object-fit: cover; 
+/* Portfolio Item */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
-  transition: transform 0.3s, border 0.3s;
-  cursor: pointer;
 }
 
-.portfolio-container img:hover {
+.portfolio-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect for image */
+.portfolio-item img:hover {
   transform: scale(1.01);
   border: 1px solid #ff00ff;
 }
 
+/* Icons Overlay */
+.portfolio-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+  border-radius: 12px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-icons {
+  opacity: 1;
+}
+
+.portfolio-icons svg {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.portfolio-icons svg:hover {
+  transform: scale(1.2);
+  color: #ff00ff;
+}
+
+/* Show More Button */
 .protfolio-showmore {
   display: flex;
   align-items: center;
@@ -48,41 +87,34 @@
   border-color: #ff00ff;
 }
 
-
+/* --- Media Queries --- */
 @media (max-width: 1024px) {
-  .portfolio-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
   .protfolio-showmore {
     font-size: 16px;
     padding: 12px 25px;
   }
 }
 
-
 @media (max-width: 768px) {
-  .portfolio-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
   .protfolio-showmore {
     padding: 10px 20px;
     font-size: 16px;
   }
 }
 
-
 @media (max-width: 480px) {
   .portfolio-container {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    gap: 20px;
   }
 
   .protfolio-showmore {
     padding: 8px 16px;
     font-size: 14px;
+  }
+
+  /* Optional: always show icons on mobile */
+  .portfolio-icons {
+    opacity: 1;
   }
 }
