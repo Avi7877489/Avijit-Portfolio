@@ -1,6 +1,7 @@
 import airbnb from '../assets/airbnb.webp'
-import spotify from '../assets/spotify.png'
+// import spotify from '../assets/spotify.png'
 import Imagify from '../assets/imagify.jpg'
+import Uber from '../assets/uber.webp'
 
 const Portfolio_data = [
     {
@@ -20,7 +21,9 @@ const Portfolio_data = [
     {
         w_no:3,
         w_name:"Web Design",
-        w_img:spotify
+        w_img:Uber,
+        w_link: 'https://uber-clone-avi.netlify.app/',
+        repo_link: 'https://github.com/Avi7877489/Ubar'
     },
     // {
     //     w_no:4,
