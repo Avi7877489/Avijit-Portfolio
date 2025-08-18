@@ -22,7 +22,7 @@ const Portfolio_data = [
         w_no:3,
         w_name:"Web Design",
         w_img:Uber,
-        w_link: 'https://uber-clone-avi.netlify.app/',
+        w_link: 'https://uber1-b3u2ss9cx-avi7877489s-projects.vercel.app/',
         repo_link: 'https://github.com/Avi7877489/Ubar'
     },
     // {
