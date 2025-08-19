@@ -1,82 +1,71 @@
 import React from "react";
 import "./About.css";
-import profilephoto from "../../assets/profilephoto.png";
+
+// Example icons/images for skills (replace with your own)
+import htmlIcon from "../../assets/skills/htmlIcon.png";
+import cssIcon from "../../assets/skills/cssIcon.png";
+import reactIcon from "../../assets/skills/reactIcon.png";
+import jsIcon from "../../assets/skills/jsIcon.png";
+import nodeIcon from "../../assets/skills/nodeIcon.png";
+import expressIcon from "../../assets/skills/expressIcon.png";
+import githubIcon from "../../assets/skills/githubIcon.png";
+import firebaseIcon from "../../assets/skills/firebaseIcon.png";
+import sqlIcon from "../../assets/skills/sqlIcon.png";
+import mongoIcon from "../../assets/skills/mongoIcon.png";
 
 const About = () => {
   return (
     <div id="about" className="about">
-      <div className="about-section">
-        <div className="about-left">
-          <img src={profilephoto} alt="Profile" />
-        </div>
-        <div className="about-right">
-          <div className="about-para">
-            <p>
-              I am a passionate full-stack developer with a love for building
-              scalable, efficient, and innovative web applications.
-            </p>
-            <p>
-              With a strong foundation in front-end and back-end technologies, I
-              strive to create seamless user experiences and solve real-world
-              problems through code.
-            </p>
+
+      {/* ---------- SKILLS SECTION ---------- */}
+      <div className="about-skills">
+        <h2>Technical Skills</h2>
+        <div className="skills-grid">
+          <div className="skill-card">
+            <img src={htmlIcon} alt="HTML" />
+            <p>HTML</p>
           </div>
-          <div className="about-skills">
-            <div className="about-skill">
-              <p>HTML & CSS</p>
-              <hr style={{ width: "80%" }} />
-            </div>
-            <div className="about-skill">
-              <p>React.js</p>
-              <hr style={{ width: "70%" }} />
-            </div>
-            <div className="about-skill">
-              <p>JavaScript</p>
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Node.js</p>
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Express.js</p>
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>GitHub</p>
-              <hr style={{ width: "60%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Firebase</p>
-              <hr style={{ width: "70%" }} />
-            </div>
-            <div className="about-skill">
-              <p>SQL</p>
-              <hr style={{ width: "80%" }} />
-            </div>
-            <div className="about-skill">
-              <p>MongoDB</p>
-              <hr style={{ width: "60%" }} />
-            </div>
+          <div className="skill-card">
+            <img src={cssIcon} alt="CSS" />
+            <p>CSS</p>
+          </div>
+          <div className="skill-card">
+            <img src={reactIcon} alt="React.js" />
+            <p>React.js</p>
+          </div>
+          <div className="skill-card">
+            <img src={jsIcon} alt="JavaScript" />
+            <p>JavaScript</p>
+          </div>
+          <div className="skill-card">
+            <img src={nodeIcon} alt="Node.js" />
+            <p>Node.js</p>
+          </div>
+          <div className="skill-card">
+            <img src={expressIcon} alt="Express.js" />
+            <p>Express.js</p>
+          </div>
+          <div className="skill-card">
+            <img src={githubIcon} alt="GitHub" />
+            <p>GitHub</p>
+          </div>
+          <div className="skill-card">
+            <img src={firebaseIcon} alt="Firebase" />
+            <p>Firebase</p>
+          </div>
+          <div className="skill-card">
+            <img src={sqlIcon} alt="SQL" />
+            <p>SQL</p>
+          </div>
+          <div className="skill-card">
+            <img src={mongoIcon} alt="MongoDB" />
+            <p>MongoDB</p>
           </div>
         </div>
       </div>
-      <div className="about-achievements">
-        <div className="about-achievement">
-          <h1>1+</h1>
-          <p>YEARS OF EXPERIENCE</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>5+</h1>
-          <p>PROJECTS COMPLETED</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>3+</h1>
-          <p>HAPPY CLIENTS</p>
-        </div>
-      </div>
+
+      
+      
     </div>
   );
 };

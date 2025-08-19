@@ -16,6 +16,7 @@ const Project = () => {
 
   return (
     <div id="project" className="portfolio">
+      <h2>Projects</h2>
       <div className="portfolio-container">
         {Portfolio_data.slice(0, itemsToShow).map((work, index) => (
           <div key={index} className="portfolio-item">
