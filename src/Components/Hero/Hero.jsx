@@ -2,11 +2,11 @@ import React, { useRef,useEffect } from "react";
 import "./Hero.css";
 import profilephoto from "../../assets/profilephoto.png";
 import resume from '../../assets/resume.pdf'
-import { useNavigate } from "react-router-dom";
 import Typed from 'typed.js';
+import { NavLink } from "react-router-dom";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Hero = () => {
-  const navigate = useNavigate()
   const typedElement = useRef(null)
 
   useEffect(() => {
@@ -28,9 +28,9 @@ const Hero = () => {
     link.click();
     document.body.removeChild(link);
   };
-  const handleConnect=()=>{
-    navigate('./contact')
-  }
+  // const handleConnect=()=>{
+  //   navigate('./contact')
+  // }
   return (
     <div id="home" className="hero">
       <img src={profilephoto} alt="" />
@@ -43,7 +43,10 @@ const Hero = () => {
       </p>
 
       <div className="hero-action">
-        <div className="hero-connect" onClick={handleConnect}>Connect with me</div>
+       
+        <AnchorLink className="anc"  offset={50} href='#contact'>
+                <NavLink to='/cont' className='nav'><div className="hero-connect">Connect with me</div></NavLink>
+              </AnchorLink>
         <div className="hero-resume" onClick={handleResumeDownload}>
           My Resume
         </div>

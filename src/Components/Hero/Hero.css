@@ -81,6 +81,13 @@
     gap: 20px;
   }
 }
+.anc{
+  text-decoration: none;
+ 
+}
+.nav{
+  text-decoration: none;
+}
 
 
 @media (max-width: 768px) {
