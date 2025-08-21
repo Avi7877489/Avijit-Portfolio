@@ -25,6 +25,11 @@ const Project = () => {
               <FaEye onClick={() => openInNewTab(work.w_link)} title="Preview" />
               <FaGithub onClick={() => openInNewTab(work.repo_link)} title="GitHub Repo" />
             </div>
+            {/* --- Project Description --- */}
+            <div className="portfolio-description">
+              <h3>{work.w_name}</h3>
+              <p>{work.w_desc}</p>
+            </div>
           </div>
         ))}
       </div>

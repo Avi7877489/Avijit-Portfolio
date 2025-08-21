@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 
-// Example icons/images for skills (replace with your own)
+// Example icons/images for skills (transparent PNG/SVG recommended)
 import htmlIcon from "../../assets/skills/htmlIcon.png";
 import cssIcon from "../../assets/skills/cssIcon.png";
 import reactIcon from "../../assets/skills/reactIcon.png";
@@ -16,7 +16,6 @@ import mongoIcon from "../../assets/skills/mongoIcon.png";
 const About = () => {
   return (
     <div id="about" className="about">
-
       {/* ---------- SKILLS SECTION ---------- */}
       <div className="about-skills">
         <h2>Technical Skills</h2>
@@ -63,9 +62,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      
-      
     </div>
   );
 };

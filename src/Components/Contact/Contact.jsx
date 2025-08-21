@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="contact-left">
           <h1>Let's talk</h1>
           <p>
-            I'm currently avaliable to take on new projects, so feel free to
+            I'm currently available to take on new projects, so feel free to
             send me a message about anything that you want me to work on. You
             can contact anytime.
           </p>

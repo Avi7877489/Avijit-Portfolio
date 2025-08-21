@@ -19,14 +19,22 @@
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03); /* subtle bg */
+  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Image */
 .portfolio-item img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, border 0.3s;
 }
 
 /* Hover effect for image */
@@ -59,12 +67,34 @@
   color: white;
   font-size: 22px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .portfolio-icons svg:hover {
   transform: scale(1.2);
   color: #ff00ff;
+}
+
+/* --- Project Description --- */
+.portfolio-description {
+  margin-top: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.portfolio-description h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #ff00ff;
+}
+
+.portfolio-description p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.4;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* Show More Button */
@@ -89,6 +119,10 @@
 
 /* --- Media Queries --- */
 @media (max-width: 1024px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .protfolio-showmore {
     font-size: 16px;
     padding: 12px 25px;
@@ -96,6 +130,10 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
   .protfolio-showmore {
     padding: 10px 20px;
     font-size: 16px;
