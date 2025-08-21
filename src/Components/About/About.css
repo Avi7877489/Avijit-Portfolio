@@ -21,7 +21,7 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 2 rows, 5 per row */
+  grid-template-columns: repeat(5, 1fr); /* default: PC layout */
   gap: 40px;
   justify-items: center;
   margin-top: 30px;
@@ -80,4 +80,69 @@
 .skill-card:hover p::after {
   width: 100%;
   left: 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 30px;
+  }
+
+  .skill-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-skills h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 25px;
+  }
+
+  .skill-card img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .skill-card p {
+    font-size: 14px;
+  }
+
+  .about-skills h2 {
+    font-size: 22px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr); /* stack vertically */
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-card p {
+    font-size: 13px;
+  }
+
+  .about-skills h2 {
+    font-size: 20px;
+  }
 }
